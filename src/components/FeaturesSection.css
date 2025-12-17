@@ -1,0 +1,359 @@
+/* Features Section Styles */
+.features-section {
+  width: 100%;
+  padding: 91px 43px;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.features-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.features-title {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 40.8px;
+  color: rgb(17, 17, 17);
+  margin: 0 0 40px;
+  padding: 0;
+  text-align: center;
+  max-width: 100%;
+}
+
+.features-title-secondary {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.features-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  width: 354px;
+  max-width: 100%;
+  height: 383.125px;
+  padding: 0;
+  border-radius: 11px;
+  background-color: rgb(250, 249, 252);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card-image {
+  width: 100%;
+  height: 199.125px;
+  object-fit: fill;
+  display: block;
+  border-radius: 11px 11px 0 0;
+}
+
+.feature-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  flex: 1;
+  position: relative;
+}
+
+.feature-card-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.feature-card-title {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(17, 17, 17);
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.feature-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.feature-item {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+  color: rgb(128, 128, 128);
+  margin: 0;
+  padding: 0;
+}
+
+.feature-card-arrow {
+  width: 10px;
+  height: 20px;
+  object-fit: fill;
+  flex-shrink: 0;
+}
+
+.features-counters {
+  display: flex;
+  flex-direction: row;
+  gap: 29px;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.feature-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: normal;
+  min-width: 0;
+  flex: 1;
+  max-width: 280px;
+}
+
+.counter-hard-value {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: normal;
+  margin-bottom: 4px;
+}
+
+.counter-value {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: rgb(17, 17, 17);
+  display: inline-block;
+}
+
+.counter-value-decimal {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: rgb(17, 17, 17);
+  display: inline-block;
+}
+
+.prefix {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: rgb(17, 17, 17);
+  display: inline;
+}
+
+.count {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: rgb(17, 17, 17);
+  display: inline;
+}
+
+.suffix {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: rgb(17, 17, 17);
+  display: inline;
+}
+
+.counter-caption {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgb(17, 17, 17);
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .features-section {
+    padding: 80px 40px;
+  }
+
+  .features-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 991px) {
+  .features-section {
+    padding: 60px 32px;
+  }
+
+  .features-title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 32px;
+  }
+
+  .features-title-secondary {
+    margin-top: 60px;
+  }
+
+  .features-cards {
+    gap: 16px;
+  }
+
+  .feature-card {
+    width: calc(50% - 8px);
+    min-width: 300px;
+  }
+
+  .features-counters {
+    gap: 24px;
+  }
+
+  .feature-counter {
+    max-width: calc(50% - 12px);
+    min-width: 200px;
+  }
+
+  .counter-value,
+  .counter-value-decimal,
+  .prefix,
+  .count,
+  .suffix {
+    font-size: 40px;
+  }
+
+  .counter-caption {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .features-section {
+    padding: 48px 20px;
+  }
+
+  .features-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 28px;
+  }
+
+  .features-title-secondary {
+    margin-top: 48px;
+    margin-bottom: 28px;
+  }
+
+  .features-cards {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 354px;
+    height: auto;
+    min-height: 383.125px;
+  }
+
+  .features-counters {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .feature-counter {
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .counter-hard-value {
+    justify-content: center;
+  }
+
+  .counter-value,
+  .counter-value-decimal,
+  .prefix,
+  .count,
+  .suffix {
+    font-size: 36px;
+  }
+
+  .counter-caption {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section {
+    padding: 40px 16px;
+  }
+
+  .features-title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  .features-title-secondary {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  .feature-card-content {
+    padding: 20px;
+  }
+
+  .features-counters {
+    gap: 16px;
+  }
+}
+
