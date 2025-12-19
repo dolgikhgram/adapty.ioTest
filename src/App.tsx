@@ -2,6 +2,7 @@ import HeroSection from './components/HeroSection'
 import TrustSection from './components/TrustSection'
 import FeaturesSection from './components/FeaturesSection'
 import CodeSection from './components/CodeSection'
+import FeaturesQuotesSection from './components/FeaturesQuotesSection'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <TrustSection />
       <FeaturesSection />
       <CodeSection />
+      <FeaturesQuotesSection />
     </>
   )
 }

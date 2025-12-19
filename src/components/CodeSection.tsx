@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import './CodeSection.css';
 
 const CodeSection = () => {
@@ -157,44 +159,51 @@ Adapty.Activate("PUBLIC_SDK_KEY", (error) => {
             Интегрируйте покупки в приложении с помощью нескольких строк кода
           </h2>
           
-          <div className="code-top-content">
-            <div className="code-description">
-              Интегрируйте IAP за несколько часов без серверного кодирования с помощью простого и удобного SDK. А дальше, Adapty будет управлять работой и состоянем каждой вашей подписки – от активации, до возврата.
-            </div>
-            <a
-              href="https://adapty.io/ru/sdk/"
-              className="code-integration-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Быстрая интеграция
-            </a>
-          </div>
-
-          <div className="code-quote-and-editor">
-            <div className="code-quote-content">
-              <div className="code-quote-block">
-                <img
-                  src="https://adapty.io/assets/uploads/2024/02/Smitten_Color-Logo-Small-02.webp"
-                  alt="Smitten"
-                  className="quote-logo"
-                  decoding="async"
-                  loading="eager"
-                />
-                <div className="quote-message">
-                  «С SDK Adapty, добавить покупки в приложение оказалось проще простого. С помощью всего нескольких строк кода я смог без проблем добавить подписки как для iOS, так и для Android.»
+          <div className="code-main-wrapper">
+            <div className="code-left-column">
+              <div className="code-top-content">
+                <div className="code-description">
+                  Интегрируйте IAP за несколько часов без серверного кодирования с помощью простого и удобного SDK. А дальше, Adapty будет управлять работой и состоянем каждой вашей подписки – от активации, до возврата.
                 </div>
-                <div className="quote-author">
+                <a
+                  href="https://adapty.io/ru/sdk/"
+                  className="code-integration-button"
+                  id="code-feature-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Быстрая интеграция
+                  <svg fill="none" height="12" viewBox="0 0 8 12" width="8" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.54056 11.7453L0.124965 10.341L4.24317 6.20975L0.149247 2.10837L1.54056 0.722595L7.05192 6.23396L1.54056 11.7453Z" fill="white"></path>
+                  </svg>
+                </a>
+              </div>
+
+              <div className="code-quote-content">
+                <div className="code-quote-block">
+                  <div className="quote-icon">««</div>
                   <img
-                    src="https://adapty.io/assets/uploads/2024/02/Magnus-Olafsson-Smitten@2x.webp"
-                    alt="Magnus Olafsson Smitten"
-                    className="quote-author-avatar"
+                    src="https://adapty.io/assets/uploads/2024/02/Smitten_Color-Logo-Small-02.webp"
+                    alt="Smitten"
+                    className="quote-logo"
                     decoding="async"
                     loading="eager"
                   />
-                  <div className="quote-author-info">
-                    <div className="quote-author-name">Магнус Олафссон</div>
-                    <div className="quote-author-position">Главный технический директор в Smitten</div>
+                  <div className="quote-message">
+                    «С SDK Adapty, добавить покупки в приложение оказалось проще простого. С помощью всего нескольких строк кода я смог без проблем добавить подписки как для iOS, так и для Android.»
+                  </div>
+                  <div className="quote-author">
+                    <img
+                      src="https://adapty.io/assets/uploads/2024/02/Magnus-Olafsson-Smitten@2x.webp"
+                      alt="Magnus Olafsson Smitten"
+                      className="quote-author-avatar"
+                      decoding="async"
+                      loading="eager"
+                    />
+                    <div className="quote-author-info">
+                      <div className="quote-author-name">Магнус Олафссон</div>
+                      <div className="quote-author-position">Главный технический директор в Smitten</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -217,12 +226,43 @@ Adapty.Activate("PUBLIC_SDK_KEY", (error) => {
                 </div>
 
                 <div className="code-block-wrapper">
-                  <pre className="code-block">
-                    <code>{codeExamples[activeTab]}</code>
-                  </pre>
+                  <SyntaxHighlighter
+                    language={activeTab === 'Swift' ? 'swift' : activeTab === 'Kotlin' ? 'kotlin' : activeTab === 'React Native' ? 'javascript' : activeTab === 'Flutter' ? 'dart' : 'csharp'}
+                    style={vscDarkPlus}
+                    customStyle={{
+                      backgroundColor: 'rgb(33, 33, 33)',
+                      padding: '16px 0 16px 16px',
+                      margin: 0,
+                      borderRadius: 0,
+                      fontSize: '14px',
+                      lineHeight: '20px',
+                      fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+                      overflow: 'visible'
+                    }}
+                    codeTagProps={{
+                      style: {
+                        fontFamily: 'inherit',
+                        fontSize: 'inherit',
+                        lineHeight: 'inherit',
+                        color: 'rgb(238, 255, 255)'
+                      }
+                    }}
+                    PreTag="pre"
+                  >
+                    {codeExamples[activeTab]}
+                  </SyntaxHighlighter>
                 </div>
                 <div className="code-footer">
-                  <div className="code-footer-text">100% Open Source</div>
+                  <div className="code-footer-left">
+                    <img
+                      src="https://adapty.io/assets/uploads/2024/01/github-logo.svg"
+                      alt="GitHub Logo"
+                      className="code-footer-github-logo"
+                      decoding="async"
+                      loading="eager"
+                    />
+                    <div className="code-footer-text">100% Open Source</div>
+                  </div>
                   <a
                     href={githubLinks[activeTab]}
                     className="code-footer-button"
@@ -252,8 +292,8 @@ Adapty.Activate("PUBLIC_SDK_KEY", (error) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  '--pattern-image': platform.pattern ? `url("${platform.pattern}")` : 'none',
-                } as React.CSSProperties & { '--pattern-image': string }}
+                  backgroundImage: platform.pattern ? `url("${platform.pattern}")` : 'none',
+                } as React.CSSProperties}
               >
                 <figure className="sdk-logo">
                   <img

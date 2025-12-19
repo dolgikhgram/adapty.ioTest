@@ -1,0 +1,246 @@
+/* Features Quotes Section Styles */
+.features-quotes-section {
+  width: 100%;
+  padding: 74px 26px;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 17, 17);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.features-quotes {
+  display: grid;
+  grid-template-columns: 345px 345px;
+  gap: 26px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: start;
+  justify-content: center;
+}
+
+.features-quotes--revert {
+  grid-template-columns: 345px 345px;
+}
+
+.features-quotes--revert .features-quotes__content {
+  order: 2;
+}
+
+.features-quotes--revert .features-quotes__image {
+  order: 1;
+}
+
+.features-quotes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.features-quotes__heading {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30.8px;
+  color: rgb(17, 17, 17);
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+
+.features-quotes__desc {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(17, 17, 17);
+  margin: 0;
+  padding: 0;
+}
+
+.features-quotes__btn {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+  padding: 5px 5px 5px 0;
+  border: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.features-quotes__btn:hover {
+  color: rgb(103, 32, 255);
+}
+
+.features-quotes__btn::after {
+  content: '→';
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.features-quotes__image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features-quotes__img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
+}
+
+.quote-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
+  background-color: transparent;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 11px;
+  width: 345px;
+  max-width: 100%;
+  margin: 0;
+}
+
+.quote-block__app {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0;
+}
+
+.app-row__name {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(17, 17, 17);
+  margin: 0;
+  padding: 0;
+}
+
+.app-row__desc {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+  margin: 0;
+  padding: 0;
+}
+
+.app-row__logo {
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.app-row--alt {
+  /* Дополнительные стили для альтернативного варианта app-row */
+}
+
+.quote-white-block__app {
+  /* Стили для белого блока с логотипом */
+}
+
+.quote-block__message {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: rgb(17, 17, 17);
+  margin: 0;
+  padding: 0;
+}
+
+.quote-block__author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.quote-block__author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.quote-block__author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quote-block__author-name {
+  font-family: 'Gilroy', 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(17, 17, 17);
+  margin: 0;
+  padding: 0;
+}
+
+.quote-block__author-position {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .features-quotes {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .features-quotes--revert .features-quotes__content {
+    order: 1;
+  }
+
+  .features-quotes--revert .features-quotes__image {
+    order: 2;
+  }
+
+  .quote-block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .features-quotes-section {
+    padding: 40px 20px;
+  }
+
+  .features-quotes {
+    gap: 32px;
+  }
+
+  .features-quotes__heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
